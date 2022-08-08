@@ -13,6 +13,7 @@ def pytest_addoption(parser):
     parser.addoption('--browser-name', action='store', default='chrome',
                      help='You must to write browser name with \'--browser-name=\'')
 
+
 @pytest.fixture(scope='function')
 def browser(request):
     lang = request.config.getoption('language')
